@@ -18,7 +18,7 @@ function calculate(){
     let totalCount=allCards.children.length;
     total.innerText=totalCount;
     interview.innerText=interviewList.length;
-    rejected.innerText=totalCount-interviewList.length;
+    rejected.innerText=rejectedList.length;
 }
 calculate();
 
