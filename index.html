@@ -41,12 +41,12 @@
         </div>
         <div class="my-6">
 
-            <button  class="bg-blue-600 text-white px-5 py-2" >All</button>
-            <button  class="bg-gray-100 px-5 py-2" >Interview</button>
-            <button  class="bg-gray-100 px-5 py-2" >Rejected</button>
+            <button onclick="toggleStyle('allBtn')" id="allBtn" class="bg-blue-600 text-black px-5 py-2" >All</button>
+            <button onclick="toggleStyle('interviewBtn')" id="interviewBtn" class="bg-gray-100 px-5 py-2" >Interview</button>
+            <button onclick="toggleStyle('rejectedBtn')" id="rejectedBtn" class="bg-gray-100 px-5 py-2" >Rejected</button>
         </div>
 
-        <section class="space-y-6">
+        <section    id="allCards" class="space-y-6">
             <div class="card flex justify-between border border-black rounded-2xl  p-8 bg-[#F8FAFC]">
                 <div class="space-y-6">
                     <div>
@@ -246,6 +246,6 @@
           </section>
     </main>    
            
-
+   <script src="script.js"></script>
 </body>
 </html>
