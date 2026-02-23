@@ -8,6 +8,7 @@ let rejected=document.getElementById('rejectedCount');
 const allBtn=document.getElementById('allBtn');
 const interviewBtn=document.getElementById('interviewBtn');
 const rejectedBtn=document.getElementById('rejectedBtn');
+const displayNumber=document.getElementById('numberdisplay');
 
 const allCards=document.getElementById('allCards');
 
@@ -82,7 +83,7 @@ const exist = interviewList.find(j => j.role == job.role);
 
       calculate();
    }
-   if(e.target.id.includes('rjdbtn')){
+   else if(e.target.id.includes('rjdbtn')){
    const parent = e.target.parentNode.parentNode;
      const officeName = parent.querySelector('#officeName').innerText;
       const role = parent.querySelector('#role').innerText;
@@ -108,7 +109,15 @@ const exist = interviewList.find(j => j.role == job.role);
 
       calculate();
    }
+   else if(e.target.id.includes('delete')){
+    const parent = e.target.parentNode.parentNode;
+    parent.remove();
 
+    calculate();
+    displayNumber.innerText = `${total.innerText} jobs`;
+    
+
+}
 });
 
 
@@ -131,6 +140,10 @@ for(let job of list){
             </div>
             <button class="bg-[#EEF4FF] p-3 rounded-2xl">${job.status}</button>
             <p class="text-gray-400">${job.description}</p>
+               <div class="flex gap-5">
+                        <button id="intbtn" class="border border-green-400 text-green-500 px-4 py-2 rounded-2xl">Interview</button>
+                        <button id="rjdbtn" class="border border-red-600 text-red-600 px-4 py-2 rounded-2xl">Rejected</button>
+                     </div>
         </div>
         <div>
             <i class="fa-regular fa-trash-can"></i>
