@@ -146,11 +146,13 @@ for(let job of list){
                      </div>
         </div>
         <div>
-            <i class="fa-regular fa-trash-can"></i>
+            <i  id="delete" class="fa-regular fa-trash-can"></i>
         </div>
         `;
 
         filteredSection.appendChild(div);
     }
 }
+
+
   
